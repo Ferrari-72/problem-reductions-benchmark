@@ -15,7 +15,7 @@ jobs:
         id: version
         run: echo "value=$(cat VERSION)" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -28,7 +28,7 @@ jobs:
       - name: Check frozen Top50 calibration evidence
         run: make verify-budget
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: "24"
           cache: npm
